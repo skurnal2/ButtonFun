@@ -10,11 +10,12 @@ import UIKit
 
 class ViewController: UIViewController {
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view.
+    @IBOutlet weak var statusLabel: UILabel!
+    @IBAction func buttonPressed(_ sender: UIButton) {
+        let title = sender.title(for: .selected)!
+        let text = "\(title) button pressed"
+        statusLabel.text = text    
     }
-
-
+    
 }
 
